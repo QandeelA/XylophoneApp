@@ -24,12 +24,38 @@ class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HomePage',
+      title: 'Home Page',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.orange,
+        appBar: AppBar(
+          actions: [
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    "images/background1.jpg",
+                    alignment: Alignment.centerLeft,
+                    height: 60,
+                    width: 60,
+                  ),
+                  const Text(
+                    '     Xylophone App',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+          backgroundColor: Colors.brown,
+        ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               buildKey(
